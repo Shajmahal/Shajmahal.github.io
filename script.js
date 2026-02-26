@@ -25,7 +25,7 @@ const setStatus = (label, color, ring) => {
 };
 
 if (status === "Open") {
-  setStatus("Open to internships • Summer 2026", "#22c55e", "rgba(34,197,94,.12)");
+  setStatus("Open to internships • Summer 2025", "#22c55e", "rgba(34,197,94,.12)");
 } else if (status === "Busy") {
   setStatus("Currently busy • Limited availability", "#f59e0b", "rgba(245,158,11,.14)");
 } else {
