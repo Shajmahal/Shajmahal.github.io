@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Amala Shaji | Computer Engineering Portfolio</title>
-  <meta name="description" content="Computer Engineering portfolio featuring hardware, embedded systems, and software projects with strong documentation and results." />
+  <meta name="description" content="Portfolio of Amala Shaji, Computer Engineering student." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -14,11 +14,9 @@
   <header class="header" id="top">
     <div class="container">
       <nav class="nav">
-        <a class="logo" href="#top" aria-label="Home">AS</a>
+        <a class="logo" href="#top">AS</a>
 
-        <button class="nav__toggle" aria-label="Open menu" id="navToggle">☰</button>
-
-        <div class="nav__links" id="navLinks">
+        <div class="nav__links">
           <a class="navlink" href="#top">Home</a>
           <a class="navlink" href="#work">Work</a>
           <a class="navlink" href="#contact">Contact</a>
@@ -26,8 +24,9 @@
         </div>
       </nav>
 
+      <!-- HERO SECTION -->
       <section class="hero">
-        <div class="hero__left">
+        <div>
           <div class="kicker">Computer Engineering • Hardware • Embedded • Software</div>
 
           <h1 class="headline">
@@ -35,79 +34,46 @@
           </h1>
 
           <p class="subhead">
-            I build end-to-end systems with a strong emphasis on <b>documentation</b>, <b>testing</b>, and <b>clean execution</b>.
-            This portfolio highlights projects that read like real engineering work.
+            I build systems with intention, structure, and strong fundamentals. 
+            I care about understanding how things work and building them the right way.
           </p>
 
-          <div class="hero__cta">
+          <div style="display:flex; gap:16px; margin-bottom:30px;">
             <a class="btn" href="#work">View Featured Work</a>
             <a class="btn btn--ghost" href="#contact">Contact Me</a>
           </div>
 
-          <div class="proofgrid">
-            <div class="proofcard">
-              <div class="proofnum">4+</div>
-              <div class="prooflabel">Projects built</div>
-              <div class="proofnote">hardware + software</div>
-            </div>
-            <div class="proofcard">
-              <div class="proofnum">12+</div>
-              <div class="prooflabel">Writeups & docs</div>
-              <div class="proofnote">README + notes</div>
-            </div>
-            <div class="proofcard">
-              <div class="proofnum">8+</div>
-              <div class="prooflabel">Tools used</div>
-              <div class="proofnote">debug + ship</div>
-            </div>
-          </div>
-
-          <div class="facts">
-            <div class="fact">
-              <span class="facttag">Focus</span>
-              <span class="facttext">Reliable systems, clean UI, measurable results</span>
-            </div>
-            <div class="fact">
-              <span class="facttag">Open to</span>
-              <span class="facttext">Internships • Summer 2025</span>
-            </div>
+          <div style="color: var(--muted); font-size:14px;">
+            <div><strong>4+</strong> Technical Projects</div>
+            <div><strong>12+</strong> Documentation & Writeups</div>
+            <div><strong>8+</strong> Engineering Tools Used</div>
+            <div style="margin-top:8px;">Open to internships • Summer 2026</div>
           </div>
         </div>
 
-        <aside class="hero__right">
-          <div class="panel terminal">
-            <div class="terminal__bar">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="terminal__title">portfolio • build log</span>
-            </div>
-            <pre class="terminal__body"><code>
-<span class="dim">$</span> Who Am I?
-<span id="type1"></span>
+        <!-- TERMINAL / ABOUT PANEL -->
+        <aside>
+          <div class="panel">
+            <pre style="white-space: pre-wrap; font-family: inherit; font-size:14px; line-height:1.7;">
+<span class="dim">$</span> who am i
+I’m a Computer Engineering student who enjoys building things and understanding how they work at a deeper level. I’m most interested in projects where I can take an idea from concept to something real, whether that’s a circuit board, embedded firmware, or a small application. I care about the details, and I don’t like leaving problems half solved. I’m still growing as an engineer, but I approach every project with curiosity, discipline, and consistency.
 
-<span class="dim">$</span> what_i_build
-<span id="type2"></span>
+<span class="dim">$</span> what i focus on
+I focus on building systems that are reliable and thoughtfully designed. That means planning before I build, testing as I go, and documenting what I learn along the way. I try to understand the fundamentals first so when something breaks, I can solve it confidently instead of guessing.
 
-<span class="dim">$</span> my_standard
-<span id="type3"></span>
-            </code></pre>
+<span class="dim">$</span> how i work
+I break complex problems into smaller parts and solve them step by step. I test early, refine often, and make sure I can clearly explain what I built and why I built it that way. I care more about doing something correctly and understanding it fully than rushing to call it finished.
+            </pre>
           </div>
 
-          <div class="panel linksPanel">
-            <h3 class="paneltitle">Quick Links</h3>
+          <div class="panel" style="margin-top:20px;">
+            <h3 style="margin-bottom:10px;">Quick Links</h3>
             <div class="chips">
-              <a class="chip" href="https://github.com/shajmahal" target="_blank" rel="noopener">GitHub</a>
-              <a class="chip" href="https://www.linkedin.com/in/amala-shaji" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="chip" href="https://github.com/shajmahal" target="_blank">GitHub</a>
+              <a class="chip" href="https://www.linkedin.com/in/amala-shaji" target="_blank">LinkedIn</a>
               <a class="chip" href="resume.html">Resume</a>
               <a class="chip" href="mailto:Amala.thomas2002@gmail.com">Email</a>
             </div>
-
-            <div class="divider"></div>
-
-            <p class="small">
-              Recruiter-friendly layout: featured work, clear skills, and direct contact info.
-            </p>
           </div>
         </aside>
       </section>
@@ -117,210 +83,84 @@
   <main class="main">
     <div class="container">
 
+      <!-- WORK SECTION -->
       <section class="section" id="work">
         <div class="sectionhead">
           <h2>Featured Work</h2>
-          <p>Each project includes what I built, how I tested it, and the artifacts that prove it.</p>
+          <p>Selected projects that reflect my approach to engineering and problem solving.</p>
         </div>
 
         <div class="workgrid">
-          <article class="workcard">
-            <div class="workmedia">
-              <div class="mediaBadge">Hardware</div>
-              <div class="mediaHint">Add image: assets/pcb.jpg</div>
-            </div>
-            <div class="workbody">
-              <div class="worktop">
-                <h3>PCB Design + Bring-Up & Validation</h3>
-                <span class="pill">Schematic → Layout → Test</span>
-              </div>
-              <p class="muted">
-                Designed a board and validated functionality through a structured bring-up checklist and measurement-driven debugging.
-              </p>
-
-              <ul class="bullets">
-                <li>Defined requirements + success checks before building</li>
-                <li>Measured rails/signals, isolated faults, documented fixes</li>
-                <li>Delivered clean docs: BOM, notes, diagrams, and README</li>
-              </ul>
-
-              <div class="badges">
-                <span class="badge">KiCad/Altium</span>
-                <span class="badge">Oscilloscope</span>
-                <span class="badge">Bring-up</span>
-                <span class="badge">BOM</span>
-              </div>
-
-              <div class="actions">
-                <a class="alink" href="https://github.com/shajmahal" target="_blank" rel="noopener">Repo</a>
-                <a class="alink" href="#" target="_blank" rel="noopener">Photos</a>
-                <a class="alink" href="#" target="_blank" rel="noopener">Writeup</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="workcard">
-            <div class="workmedia">
-              <div class="mediaBadge">Embedded</div>
-              <div class="mediaHint">Add image: assets/embedded.jpg</div>
-            </div>
-            <div class="workbody">
-              <div class="worktop">
-                <h3>Sensor System Firmware (Reliable Data)</h3>
-                <span class="pill">Stability + Debugging</span>
-              </div>
-              <p class="muted">
-                Firmware that reads sensors and produces stable output with timeouts, error handling, and “break it on purpose” testing.
-              </p>
-
-              <ul class="bullets">
-                <li>Comms: I2C/SPI/UART with defensive coding</li>
-                <li>Reliability: debouncing, retries, timeouts, recovery behavior</li>
-                <li>Validation: logs + known-good inputs + edge-case tests</li>
-              </ul>
-
-              <div class="badges">
-                <span class="badge">C/C++</span>
-                <span class="badge">I2C/SPI/UART</span>
-                <span class="badge">Interrupts</span>
-                <span class="badge">Logging</span>
-              </div>
-
-              <div class="actions">
-                <a class="alink" href="https://github.com/shajmahal" target="_blank" rel="noopener">Repo</a>
-                <a class="alink" href="#" target="_blank" rel="noopener">Demo</a>
-                <a class="alink" href="#" target="_blank" rel="noopener">Design Notes</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="workcard">
-            <div class="workmedia">
-              <div class="mediaBadge">Software</div>
-              <div class="mediaHint">Add image: assets/app.jpg</div>
-            </div>
-            <div class="workbody">
-              <div class="worktop">
-                <h3>Portfolio-Ready App Prototype</h3>
-                <span class="pill">Clean UI + Architecture</span>
-              </div>
-              <p class="muted">
-                A shippable-feeling prototype with clear UX, modular components, and documentation that explains decisions.
-              </p>
-
-              <ul class="bullets">
-                <li>Readable structure + scalable components</li>
-                <li>Simple, fast flow that looks production-minded</li>
-                <li>Clear README: setup, demo, roadmap</li>
-              </ul>
-
-              <div class="badges">
-                <span class="badge">React</span>
-                <span class="badge">JavaScript</span>
-                <span class="badge">UI/UX</span>
-                <span class="badge">Docs</span>
-              </div>
-
-              <div class="actions">
-                <a class="alink" href="https://github.com/shajmahal" target="_blank" rel="noopener">Repo</a>
-                <a class="alink" href="#" target="_blank" rel="noopener">Live Demo</a>
-                <a class="alink" href="#" target="_blank" rel="noopener">Readme</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="note">
-          <b>Recruiter tip:</b> Add <b>1 metric</b> (time saved, accuracy, tests passed, latency, cost) and
-          <b>1 artifact</b> (scope screenshot, diagram PDF, demo clip, photos) per project.
-        </div>
-      </section>
-
-      <section class="section" id="skills">
-        <div class="sectionhead">
-          <h2>Skills</h2>
-          <p>Tools and strengths I use to build, debug, and ship.</p>
-        </div>
-
-        <div class="skillgrid">
-          <div class="skillcard">
-            <h3>Hardware</h3>
-            <div class="chips">
-              <span class="chip">PCB Design</span>
-              <span class="chip">Schematic Capture</span>
-              <span class="chip">BOM</span>
-              <span class="chip">Soldering</span>
-              <span class="chip">Debugging</span>
-            </div>
+          <div class="workcard">
+            <h3>PCB Design & Validation</h3>
+            <p class="muted">
+              Designed and tested a board from schematic to bring-up, documenting the full debugging process and validating performance through measurement.
+            </p>
           </div>
 
-          <div class="skillcard">
-            <h3>Embedded</h3>
-            <div class="chips">
-              <span class="chip">C/C++</span>
-              <span class="chip">GPIO/PWM</span>
-              <span class="chip">I2C/SPI/UART</span>
-              <span class="chip">Interrupts</span>
-              <span class="chip">Logging</span>
-            </div>
+          <div class="workcard">
+            <h3>Embedded Firmware System</h3>
+            <p class="muted">
+              Built reliable sensor firmware with structured testing, defensive coding, and clear documentation.
+            </p>
           </div>
 
-          <div class="skillcard">
-            <h3>Software</h3>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">APIs</span>
-              <span class="chip">SQL</span>
-              <span class="chip">Git/GitHub</span>
-            </div>
-          </div>
-
-          <div class="skillcard">
-            <h3>Engineering Habits</h3>
-            <div class="chips">
-              <span class="chip">Documentation</span>
-              <span class="chip">Testing Mindset</span>
-              <span class="chip">Root Cause Analysis</span>
-              <span class="chip">Clear Communication</span>
-              <span class="chip">Iteration</span>
-            </div>
+          <div class="workcard">
+            <h3>Software Application Prototype</h3>
+            <p class="muted">
+              Developed a clean, functional interface with modular structure and a professional-level README explaining architecture and decisions.
+            </p>
           </div>
         </div>
       </section>
 
+      <!-- CONTACT SECTION -->
       <section class="section" id="contact">
         <div class="sectionhead">
           <h2>Contact Me</h2>
-          <p>If you’re hiring or want to collaborate, here’s the fastest way to reach me.</p>
+          <p>If you're hiring or would like to connect, feel free to reach out.</p>
         </div>
 
         <div class="contactgrid">
           <div class="contactcard">
             <h3>Email</h3>
-            <p><a class="contactlink" href="mailto:Amala.thomas2002@gmail.com">Amala.thomas2002@gmail.com</a></p>
+            <p>
+              <a class="contactlink" href="mailto:Amala.thomas2002@gmail.com">
+                Amala.thomas2002@gmail.com
+              </a>
+            </p>
           </div>
 
           <div class="contactcard">
             <h3>GitHub</h3>
-            <p><a class="contactlink" href="https://github.com/shajmahal" target="_blank" rel="noopener">github.com/shajmahal</a></p>
+            <p>
+              <a class="contactlink" href="https://github.com/shajmahal" target="_blank">
+                github.com/shajmahal
+              </a>
+            </p>
           </div>
 
           <div class="contactcard">
             <h3>LinkedIn</h3>
-            <p><a class="contactlink" href="https://www.linkedin.com/in/amala-shaji" target="_blank" rel="noopener">linkedin.com/in/amala-shaji</a></p>
+            <p>
+              <a class="contactlink" href="https://www.linkedin.com/in/amala-shaji" target="_blank">
+                linkedin.com/in/amala-shaji
+              </a>
+            </p>
           </div>
         </div>
 
         <footer class="footer">
-          <p class="small">© <span id="year"></span> Amala Shaji • Built with GitHub Pages</p>
-          <a class="small" href="#top">Back to top ↑</a>
+          © <span id="year"></span> Amala Shaji • Built with GitHub Pages
         </footer>
       </section>
 
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
