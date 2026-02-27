@@ -16,14 +16,12 @@
   --text:#f2f3f7;
   --muted:#a4a6b3;
   --accent:#b79cff;
-  --accent-soft:#e1d6ff;
+  --accent-soft:#e6dcff;
   --border:rgba(255,255,255,0.08);
 }
 
-/* ================================
-   BASE
-================================ */
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   background:var(--bg);
@@ -40,7 +38,7 @@ body{
   z-index:-1;
 }
 
-.container{max-width:1050px;margin:auto;padding:50px 24px;}
+.container{max-width:1000px;margin:auto;padding:60px 24px;}
 .section{margin-top:120px;}
 
 .kicker{
@@ -54,70 +52,82 @@ body{
 .headline{
   font-size:54px;
   font-weight:700;
-  margin-bottom:30px;
+  margin-bottom:36px;
   letter-spacing:-1px;
 }
 
 .grad{
-  background:linear-gradient(90deg,#b79cff,#e6dcff);
+  background:linear-gradient(90deg,#b79cff,#f0e9ff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
-/* ================================
-   NAV
-================================ */
+/* NAV */
 .nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:40px;
+  margin-bottom:50px;
 }
 .logo{font-weight:700;text-decoration:none;color:white;}
-.nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:14px;}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:28px;
+  font-size:14px;
+}
 .nav a:hover{color:var(--accent-soft);}
 
-/* ================================
-   PANEL
-================================ */
-.panel{
-  background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));
-  border:1px solid var(--border);
+/* NOTEPAD WINDOW */
+.notepad{
   border-radius:16px;
-  padding:24px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.35);
-  margin-top:30px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.12);
+  background:rgba(24,24,34,0.75);
+  backdrop-filter:blur(10px);
+  box-shadow:0 25px 70px rgba(0,0,0,0.45);
 }
 
-/* ================================
-   BUILD LOG
-================================ */
-.buildlog__title{
+.notepad__topbar{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  font-size:12px;
-  color:var(--muted);
-  margin-bottom:16px;
+  justify-content:space-between;
+  padding:12px 16px;
+  background:rgba(255,255,255,0.05);
+  border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .dots{display:flex;gap:8px;}
-.dot{width:10px;height:10px;border-radius:50%;}
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+}
 .red{background:#ff5f56;}
 .yellow{background:#ffbd2e;}
 .green{background:#27c93f;}
 
-.buildlog pre{
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:13.5px;
-  line-height:1.8;
-  white-space:pre-wrap;
+.notepad__title{
+  font-size:12px;
+  color:rgba(242,243,247,0.7);
+}
+
+.notepad__body{
+  padding:22px 24px;
+}
+
+.notepad__body pre{
   margin:0;
+  white-space:pre-wrap;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size:13.5px;
+  line-height:1.85;
+  color:rgba(242,243,247,0.92);
 }
 
 .prompt{
   color:var(--accent-soft);
-  font-weight:600;
+  font-weight:700;
 }
 
 .divider{
@@ -126,20 +136,31 @@ body{
   margin:18px 0;
 }
 
-/* ================================
-   QUICK LINKS
-================================ */
-.chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;}
+/* QUICK LINKS */
+.panel{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:22px;
+  margin-top:28px;
+}
+
+.chips{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
 
 .chip{
   padding:6px 12px;
   font-size:13px;
   border-radius:8px;
   background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.10);
+  border:1px solid rgba(255,255,255,0.1);
   color:var(--text);
   text-decoration:none;
-  transition:all .2s ease;
+  transition:.2s ease;
 }
 
 .chip:hover{
@@ -151,12 +172,10 @@ body{
 .quicknote{
   font-size:13px;
   color:var(--muted);
-  margin-top:16px;
+  margin-top:14px;
 }
 
-/* ================================
-   WORK SECTION
-================================ */
+/* WORK */
 .workgrid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -171,18 +190,14 @@ body{
   padding:22px;
   transition:.25s ease;
 }
-
 .workcard:hover{
-  transform:translateY(-5px);
-  box-shadow:0 16px 40px rgba(0,0,0,0.35);
+  transform:translateY(-6px);
+  box-shadow:0 18px 50px rgba(0,0,0,0.4);
 }
-
 .workcard h3{margin-bottom:10px;}
 .muted{color:var(--muted);font-size:14px;}
 
-/* ================================
-   CONTACT
-================================ */
+/* CONTACT */
 .contactgrid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -197,7 +212,10 @@ body{
   padding:22px;
 }
 
-.contactcard h3{color:var(--accent);margin-bottom:8px;}
+.contactcard h3{
+  color:var(--accent);
+  margin-bottom:8px;
+}
 
 .contactlink{
   color:var(--accent-soft);
@@ -236,16 +254,17 @@ footer{
 <div class="kicker">Computer Engineering • Hardware • Embedded • Software</div>
 <h1 class="headline"><span class="grad">Amala Shaji</span></h1>
 
-<div class="panel buildlog">
-  <div class="buildlog__title">
+<div class="notepad">
+  <div class="notepad__topbar">
     <div class="dots">
       <span class="dot red"></span>
       <span class="dot yellow"></span>
       <span class="dot green"></span>
     </div>
-    <span>portfolio • build log</span>
+    <div class="notepad__title">Notes — Portfolio Build Log</div>
   </div>
 
+  <div class="notepad__body">
 <pre>
 <span class="prompt">$</span> Who Am I?
 I’m a Computer Engineering student who enjoys building things and understanding how they work at a deeper level. I’m most interested in projects where I can take an idea from concept to something real, whether that’s a circuit board, embedded firmware, or a small application. I care about the details and don’t like leaving problems half solved. I’m still growing as an engineer, but I approach every project with curiosity, discipline, and consistency.
@@ -260,6 +279,7 @@ I build practical systems — hardware, embedded code, and software applications
 <span class="prompt">$</span> my standard
 I plan before building, test while developing, and document what I learn along the way. I try to understand the fundamentals first so when something breaks, I can fix it confidently instead of guessing. I care more about doing something correctly than rushing to call it finished.
 </pre>
+  </div>
 </div>
 
 <div class="panel">
