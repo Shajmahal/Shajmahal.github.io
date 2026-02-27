@@ -1,160 +1,327 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Amala Shaji | Computer Engineering Portfolio</title>
-  <meta name="description" content="Portfolio of Amala Shaji, Computer Engineering student." />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Amala Shaji | Computer Engineering Portfolio</title>
+
+<style>
+
+/* ================================
+   COLOR SYSTEM
+================================ */
+:root{
+  --bg:#0f0f15;
+  --card:#181822;
+  --text:#f2f3f7;
+  --muted:#a4a6b3;
+  --accent:#b79cff;
+  --accent-soft:#e1d6ff;
+  --border:rgba(255,255,255,0.08);
+}
+
+/* ================================
+   BASE
+================================ */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+}
+
+.bg{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(183,156,255,0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(183,156,255,0.05), transparent 40%);
+  z-index:-1;
+}
+
+.container{max-width:1050px;margin:auto;padding:50px 24px;}
+.section{margin-top:120px;}
+
+.kicker{
+  font-size:12px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:16px;
+}
+
+.headline{
+  font-size:54px;
+  font-weight:700;
+  margin-bottom:30px;
+  letter-spacing:-1px;
+}
+
+.grad{
+  background:linear-gradient(90deg,#b79cff,#e6dcff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ================================
+   NAV
+================================ */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+}
+.logo{font-weight:700;text-decoration:none;color:white;}
+.nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:14px;}
+.nav a:hover{color:var(--accent-soft);}
+
+/* ================================
+   PANEL
+================================ */
+.panel{
+  background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.35);
+  margin-top:30px;
+}
+
+/* ================================
+   BUILD LOG
+================================ */
+.buildlog__title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.dots{display:flex;gap:8px;}
+.dot{width:10px;height:10px;border-radius:50%;}
+.red{background:#ff5f56;}
+.yellow{background:#ffbd2e;}
+.green{background:#27c93f;}
+
+.buildlog pre{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:13.5px;
+  line-height:1.8;
+  white-space:pre-wrap;
+  margin:0;
+}
+
+.prompt{
+  color:var(--accent-soft);
+  font-weight:600;
+}
+
+.divider{
+  height:1px;
+  background:rgba(255,255,255,0.08);
+  margin:18px 0;
+}
+
+/* ================================
+   QUICK LINKS
+================================ */
+.chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;}
+
+.chip{
+  padding:6px 12px;
+  font-size:13px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.10);
+  color:var(--text);
+  text-decoration:none;
+  transition:all .2s ease;
+}
+
+.chip:hover{
+  background:rgba(183,156,255,0.12);
+  border-color:rgba(183,156,255,0.4);
+  transform:translateY(-2px);
+}
+
+.quicknote{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:16px;
+}
+
+/* ================================
+   WORK SECTION
+================================ */
+.workgrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  margin-top:40px;
+}
+
+.workcard{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:22px;
+  transition:.25s ease;
+}
+
+.workcard:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 40px rgba(0,0,0,0.35);
+}
+
+.workcard h3{margin-bottom:10px;}
+.muted{color:var(--muted);font-size:14px;}
+
+/* ================================
+   CONTACT
+================================ */
+.contactgrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+  margin-top:40px;
+}
+
+.contactcard{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:22px;
+}
+
+.contactcard h3{color:var(--accent);margin-bottom:8px;}
+
+.contactlink{
+  color:var(--accent-soft);
+  font-weight:600;
+  text-decoration:none;
+}
+
+.contactlink:hover{color:white;}
+
+footer{
+  margin-top:90px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
+}
+
+</style>
 </head>
 
 <body>
-  <div class="bg"></div>
+<div class="bg"></div>
 
-  <header class="header" id="top">
-    <div class="container">
-      <nav class="nav">
-        <a class="logo" href="#top">AS</a>
+<div class="container">
 
-        <div class="nav__links">
-          <a class="navlink" href="#top">Home</a>
-          <a class="navlink" href="#work">Work</a>
-          <a class="navlink" href="#contact">Contact</a>
-          <a class="btn btn--small" href="resume.html">Resume</a>
-        </div>
-      </nav>
+<nav class="nav">
+  <a class="logo" href="#">AS</a>
+  <div>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+    <a href="resume.html">Resume</a>
+  </div>
+</nav>
 
-      <!-- HERO SECTION -->
-      <section class="hero" style="grid-template-columns: 1fr; margin-top: 70px;">
+<div class="kicker">Computer Engineering • Hardware • Embedded • Software</div>
+<h1 class="headline"><span class="grad">Amala Shaji</span></h1>
 
-        <div>
-          <div class="kicker">Computer Engineering • Hardware • Embedded • Software</div>
+<div class="panel buildlog">
+  <div class="buildlog__title">
+    <div class="dots">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <span>portfolio • build log</span>
+  </div>
 
-          <h1 class="headline">
-            <span class="grad">Amala Shaji</span>
-          </h1>
-
-          <!-- TERMINAL BLOCK -->
-          <div class="panel" style="margin-top:30px;">
-            <div style="font-size:12px; color: var(--muted); margin-bottom:12px;">
-              portfolio • build log
-            </div>
-
-            <pre style="white-space: pre-wrap; font-family: inherit; font-size:14px; line-height:1.7;">
-<span class="dim">$</span> Who Am I?
+<pre>
+<span class="prompt">$</span> Who Am I?
 I’m a Computer Engineering student who enjoys building things and understanding how they work at a deeper level. I’m most interested in projects where I can take an idea from concept to something real, whether that’s a circuit board, embedded firmware, or a small application. I care about the details and don’t like leaving problems half solved. I’m still growing as an engineer, but I approach every project with curiosity, discipline, and consistency.
 
-<span class="dim">$</span> what I build
+<span class="divider"></span>
+
+<span class="prompt">$</span> what I build
 I build practical systems — hardware, embedded code, and software applications — that are reliable, clearly structured, and tested properly. I focus on turning ideas into working results instead of just prototypes that look good on the surface.
 
-<span class="dim">$</span> my standard
+<span class="divider"></span>
+
+<span class="prompt">$</span> my standard
 I plan before building, test while developing, and document what I learn along the way. I try to understand the fundamentals first so when something breaks, I can fix it confidently instead of guessing. I care more about doing something correctly than rushing to call it finished.
-            </pre>
-          </div>
+</pre>
+</div>
 
-          <!-- QUICK LINKS -->
-          <div class="panel" style="margin-top:24px;">
-            <h3 style="margin-bottom:14px;">Quick Links</h3>
+<div class="panel">
+  <h3>Quick Links</h3>
+  <div class="chips">
+    <a class="chip" href="https://github.com/shajmahal" target="_blank">GitHub</a>
+    <a class="chip" href="https://www.linkedin.com/in/amala-shaji" target="_blank">LinkedIn</a>
+    <a class="chip" href="resume.html">Resume</a>
+    <a class="chip" href="mailto:Amala.thomas2002@gmail.com">Email</a>
+  </div>
+  <div class="quicknote">
+    Recruiter-friendly layout: featured work, clear skills, and direct contact info.
+  </div>
+</div>
 
-            <div class="chips">
-              <a class="chip" href="https://github.com/shajmahal" target="_blank">GitHub</a>
-              <a class="chip" href="https://www.linkedin.com/in/amala-shaji" target="_blank">LinkedIn</a>
-              <a class="chip" href="resume.html">Resume</a>
-              <a class="chip" href="mailto:Amala.thomas2002@gmail.com">Email</a>
-            </div>
-
-            <p style="margin-top:16px; color: var(--muted); font-size:13px;">
-              Recruiter-friendly layout: featured work, clear skills, and direct contact info.
-            </p>
-          </div>
-
-        </div>
-
-      </section>
+<section class="section" id="work">
+  <h2>Featured Work</h2>
+  <div class="workgrid">
+    <div class="workcard">
+      <h3>PCB Design & Validation</h3>
+      <p class="muted">Designed and tested a board from schematic to bring-up, documenting debugging and validating performance.</p>
     </div>
-  </header>
-
-  <main class="main">
-    <div class="container">
-
-      <!-- WORK SECTION -->
-      <section class="section" id="work">
-        <div class="sectionhead">
-          <h2>Featured Work</h2>
-          <p>Selected projects that reflect my approach to engineering and problem solving.</p>
-        </div>
-
-        <div class="workgrid">
-          <div class="workcard">
-            <h3>PCB Design & Validation</h3>
-            <p class="muted">
-              Designed and tested a board from schematic to bring-up, documenting the debugging process and validating performance through measurement.
-            </p>
-          </div>
-
-          <div class="workcard">
-            <h3>Embedded Firmware System</h3>
-            <p class="muted">
-              Built reliable sensor firmware with structured testing, defensive coding, and clear documentation.
-            </p>
-          </div>
-
-          <div class="workcard">
-            <h3>Software Application Prototype</h3>
-            <p class="muted">
-              Developed a clean, functional interface with modular structure and a professional README explaining architecture and decisions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section class="section" id="contact">
-        <div class="sectionhead">
-          <h2>Contact Me</h2>
-          <p>I’m open to internship opportunities and thoughtful conversations about engineering work. I’d be happy to connect.</p>
-        </div>
-
-        <div class="contactgrid">
-          <div class="contactcard">
-            <h3>Email</h3>
-            <p>
-              <a class="contactlink" href="mailto:Amala.thomas2002@gmail.com">
-                Amala.thomas2002@gmail.com
-              </a>
-            </p>
-          </div>
-
-          <div class="contactcard">
-            <h3>GitHub</h3>
-            <p>
-              <a class="contactlink" href="https://github.com/shajmahal" target="_blank">
-                github.com/shajmahal
-              </a>
-            </p>
-          </div>
-
-          <div class="contactcard">
-            <h3>LinkedIn</h3>
-            <p>
-              <a class="contactlink" href="https://www.linkedin.com/in/amala-shaji" target="_blank">
-                linkedin.com/in/amala-shaji
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <footer class="footer">
-          © <span id="year"></span> Amala Shaji • Built with GitHub Pages
-        </footer>
-      </section>
-
+    <div class="workcard">
+      <h3>Embedded Firmware System</h3>
+      <p class="muted">Built reliable firmware with structured testing and defensive coding practices.</p>
     </div>
-  </main>
+    <div class="workcard">
+      <h3>Software Application Prototype</h3>
+      <p class="muted">Developed a clean, modular interface with clear documentation and architecture decisions.</p>
+    </div>
+  </div>
+</section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<section class="section" id="contact">
+  <h2>Contact Me</h2>
+  <p class="muted">If my work resonates with you or you’re looking for someone who builds with intention and discipline, I’d genuinely love to connect.</p>
+
+  <div class="contactgrid">
+    <div class="contactcard">
+      <h3>Email</h3>
+      <a class="contactlink" href="mailto:Amala.thomas2002@gmail.com">Amala.thomas2002@gmail.com</a>
+    </div>
+    <div class="contactcard">
+      <h3>GitHub</h3>
+      <a class="contactlink" href="https://github.com/shajmahal" target="_blank">github.com/shajmahal</a>
+    </div>
+    <div class="contactcard">
+      <h3>LinkedIn</h3>
+      <a class="contactlink" href="https://www.linkedin.com/in/amala-shaji" target="_blank">linkedin.com/in/amala-shaji</a>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Amala Shaji • Built with GitHub Pages
+  </footer>
+</section>
+
+</div>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 
 </body>
 </html>
