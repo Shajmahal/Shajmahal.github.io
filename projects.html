@@ -1,148 +1,84 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects | Amala Shaji</title>
 
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Projects | Amala Shaji</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <div class="bg"></div>
 
-  <div class="container">
+<div class="container">
 
-    <nav class="nav">
-      <a class="logo" href="index.html">AS</a>
+<nav class="nav">
 
-      <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
+<a class="logo" href="index.html">AS</a>
 
-      <div class="navLinks" id="navLinks">
-        <a href="projects.html" class="activeLink">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-    </nav>
+<button id="navToggle" class="navToggle">☰</button>
 
-    <h1>Projects</h1>
-    <p class="sub">Click a project to view details.</p>
+<div id="navLinks" class="navLinks">
+<a href="projects.html">Projects</a>
+<a href="resume.html">Resume</a>
+<a href="index.html#contact">Contact</a>
+</div>
 
-    <div class="grid">
+</nav>
 
-      <div class="card" data-modal="pcb">
-        <h3>PCB Design & Validation</h3>
-        <p>Designed and tested a board from schematic to full validation.</p>
-      </div>
+<h1>Projects</h1>
 
-      <div class="card" data-modal="firmware">
-        <h3>Embedded Firmware System</h3>
-        <p>Reliable firmware for sensor communication and data collection.</p>
-      </div>
+<div class="grid">
 
-      <div class="card" data-modal="software">
-        <h3>Software Application Prototype</h3>
-        <p>Modular software architecture with clean documentation.</p>
-      </div>
+<div class="card" onclick="openModal('pcb')">
+<h3>PCB Design & Validation</h3>
+<p>Designed and tested a board from schematic to full validation.</p>
+</div>
 
-    </div>
+<div class="card" onclick="openModal('firmware')">
+<h3>Embedded Firmware</h3>
+<p>Reliable firmware system for sensor communication.</p>
+</div>
 
-    <footer>
-      © <span id="year"></span> Amala Shaji • Built with GitHub Pages
-    </footer>
+<div class="card" onclick="openModal('software')">
+<h3>Software Application</h3>
+<p>Modular software architecture prototype.</p>
+</div>
 
-  </div>
+</div>
 
-  <!-- MODAL -->
-  <div class="overlay" id="overlay" aria-hidden="true">
-    <div class="notepadModal" role="dialog" aria-modal="true" aria-label="Project details">
-      <div class="topbar">
-        <div class="dots">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-        </div>
-        <div class="close" id="closeModalBtn">Close</div>
-      </div>
+<footer>
+© <span id="year"></span> Amala Shaji
+</footer>
 
-      <div class="body" id="modalContent"></div>
-    </div>
-  </div>
+</div>
 
-  <script src="script.js"></script>
+<div class="overlay" id="overlay">
 
-  <script>
-    // Projects modal data
-    const content = {
-      pcb: `
-        <h2>PCB Design & Validation</h2>
-        <p>This project focused on designing a printed circuit board from schematic design to physical testing and validation.</p>
-        <p><strong>Highlights</strong></p>
-        <p>• Schematic design and layout planning</p>
-        <p>• Hardware debugging and signal validation</p>
-        <p>• Documentation of testing procedures</p>
-        <p style="margin-top:14px;">
-          <a class="contactlink" href="https://github.com/shajmahal" target="_blank" rel="noopener">View GitHub →</a>
-        </p>
-      `,
-      firmware: `
-        <h2>Embedded Firmware System</h2>
-        <p>Developed firmware that communicates with sensors and processes real-time data.</p>
-        <p><strong>Highlights</strong></p>
-        <p>• Defensive coding practices</p>
-        <p>• Error handling and logging</p>
-        <p>• Testing and debugging workflows</p>
-        <p style="margin-top:14px;">
-          <a class="contactlink" href="https://github.com/shajmahal" target="_blank" rel="noopener">View GitHub →</a>
-        </p>
-      `,
-      software: `
-        <h2>Software Application Prototype</h2>
-        <p>A modular application prototype designed with clean architecture and documentation.</p>
-        <p><strong>Highlights</strong></p>
-        <p>• Modular code structure</p>
-        <p>• Clear documentation</p>
-        <p>• Simple user interface design</p>
-        <p style="margin-top:14px;">
-          <a class="contactlink" href="https://github.com/shajmahal" target="_blank" rel="noopener">View GitHub →</a>
-        </p>
-      `
-    };
+<div class="modal">
 
-    const overlay = document.getElementById("overlay");
-    const modalContent = document.getElementById("modalContent");
-    const closeBtn = document.getElementById("closeModalBtn");
+<div class="modalTop">
 
-    function openModal(key){
-      if (!overlay || !modalContent) return;
-      modalContent.innerHTML = content[key] || "<p>Project details not found.</p>";
-      overlay.classList.add("active");
-      overlay.setAttribute("aria-hidden", "false");
-    }
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
 
-    function closeModal(){
-      if (!overlay) return;
-      overlay.classList.remove("active");
-      overlay.setAttribute("aria-hidden", "true");
-    }
+<div class="close" onclick="closeModal()">Close</div>
 
-    document.querySelectorAll("[data-modal]").forEach(card => {
-      card.addEventListener("click", () => openModal(card.dataset.modal));
-    });
+</div>
 
-    closeBtn?.addEventListener("click", closeModal);
+<div id="modalContent" class="modalBody"></div>
 
-    // Click outside closes
-    overlay?.addEventListener("click", (e) => {
-      if (e.target === overlay) closeModal();
-    });
+</div>
 
-    // ESC closes
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeModal();
-    });
-  </script>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
