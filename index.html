@@ -1,160 +1,120 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Amala Shaji | Computer Engineering Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="style.css" />
+<title>Amala Shaji | Computer Engineering Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <div class="bg"></div>
 
-  <div class="container">
+<div class="container">
 
-    <!-- NAV -->
-    <nav class="nav">
-      <a class="logo" href="index.html">AS</a>
+<nav class="nav">
 
-      <!-- Mobile toggle -->
-      <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
+<a class="logo" href="index.html">AS</a>
 
-      <div class="navLinks" id="navLinks">
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+<button id="navToggle" class="navToggle">☰</button>
 
-    <div class="kicker">Computer Engineering • Hardware • Embedded • Software</div>
+<div id="navLinks" class="navLinks">
+<a href="projects.html">Projects</a>
+<a href="resume.html">Resume</a>
+<a href="#contact">Contact</a>
+</div>
 
-    <h1 class="headline">
-      <span class="grad">Amala Shaji</span>
-    </h1>
+</nav>
 
-    <!-- STATUS + TERMINAL -->
-    <div class="terminal" aria-label="Intro terminal">
-      <div class="terminal__topbar">
-        <div class="dots">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-        </div>
+<div class="kicker">Computer Engineering • Hardware • Embedded • Software</div>
 
-        <div class="terminal__right">
-          <span class="status">
-            <span class="statusDot" id="statusDot"></span>
-            <span class="statusText" id="statusText">Open</span>
-          </span>
-        </div>
-      </div>
+<h1 class="headline grad">Amala Shaji</h1>
 
-      <div class="terminal__body buildlog">
-        <div class="tline"><span class="prompt">$</span> <span id="typeLine1"></span></div>
-        <div class="tline"><span class="prompt">$</span> <span id="typeLine2"></span></div>
-        <div class="tline"><span class="prompt">$</span> <span id="typeLine3"></span></div>
+<div class="terminal">
 
-        <div class="dividerline"></div>
+<div class="terminal__topbar">
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
 
-        <pre class="ttext">
-Who Am I?
-I’m a Computer Engineering student who enjoys building things and understanding how they work at a deeper level.
-I’m most interested in projects where I can take an idea from concept to something real — whether that’s a circuit board,
-embedded firmware, or a small application. I care about the details and don’t like leaving problems half solved.
+<div class="status">
+<span id="statusDot" class="statusDot"></span>
+<span id="statusText">Loading...</span>
+</div>
+</div>
 
-What I build
-Practical systems — hardware, embedded code, and software — that are reliable, clearly structured, and tested properly.
+<div class="terminal__body">
 
-My standard
-I plan before building, test while developing, and document what I learn along the way.</pre>
-      </div>
-    </div>
+<div class="tline"><span class="prompt">$</span> <span id="typeLine1"></span></div>
+<div class="tline"><span class="prompt">$</span> <span id="typeLine2"></span></div>
+<div class="tline"><span class="prompt">$</span> <span id="typeLine3"></span></div>
 
-    <!-- QUICK LINKS -->
-    <div class="panel quicklinks">
-      <h3>Quick Links</h3>
+</div>
 
-      <div class="chips">
-        <a class="chip" href="projects.html">Projects</a>
-        <a class="chip" href="resume.html">Resume</a>
-        <a class="chip" href="https://github.com/shajmahal" target="_blank" rel="noopener">GitHub</a>
-        <a class="chip" href="https://www.linkedin.com/in/amala-shaji" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="chip" href="mailto:Amala.thomas2002@gmail.com">Email</a>
-      </div>
+</div>
 
-      <div class="quicknote">
-        Recruiter-friendly layout: featured work, clear skills, and direct contact info.
-      </div>
-    </div>
+<div class="panel quicklinks">
 
-    <!-- FEATURED WORK -->
-    <section class="section" id="work">
-      <div class="section__top">
-        <h2>Featured Work</h2>
-        <div class="filters">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="hardware">Hardware</button>
-          <button class="filter" data-filter="embedded">Embedded</button>
-          <button class="filter" data-filter="software">Software</button>
-          <button class="filter" data-filter="systems">Systems</button>
-        </div>
-      </div>
+<h3>Quick Links</h3>
 
-      <div class="workgrid">
-        <a class="pcard" data-tags="hardware systems" href="projects.html">
-          <h3>PCB Design & Validation</h3>
-          <p class="muted">Designed and tested a board from schematic to bring-up, documenting debugging and validating performance.</p>
-          <span class="alink">View details →</span>
-        </a>
+<div class="chips">
 
-        <a class="pcard" data-tags="embedded systems" href="projects.html">
-          <h3>Embedded Firmware System</h3>
-          <p class="muted">Built reliable firmware with structured testing and defensive coding practices.</p>
-          <span class="alink">View details →</span>
-        </a>
+<a class="chip" href="projects.html">Projects</a>
 
-        <a class="pcard" data-tags="software" href="projects.html">
-          <h3>Software Application Prototype</h3>
-          <p class="muted">Developed a clean, modular interface with clear documentation and architecture decisions.</p>
-          <span class="alink">View details →</span>
-        </a>
-      </div>
-    </section>
+<a class="chip" href="resume.html">Resume</a>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <h2>Contact Me</h2>
-      <p class="muted">
-        If my work resonates with you or you’re looking for someone who builds with intention and discipline, I’d love to connect.
-      </p>
+<a class="chip" href="https://github.com/shajmahal" target="_blank">GitHub</a>
 
-      <div class="contactgrid">
-        <div class="contactcard">
-          <h3>Email</h3>
-          <a class="contactlink" href="mailto:Amala.thomas2002@gmail.com">Amala.thomas2002@gmail.com</a>
-        </div>
+<a class="chip" href="https://www.linkedin.com/in/amala-shaji" target="_blank">LinkedIn</a>
 
-        <div class="contactcard">
-          <h3>GitHub</h3>
-          <a class="contactlink" href="https://github.com/shajmahal" target="_blank" rel="noopener">github.com/shajmahal</a>
-        </div>
+<a class="chip" href="mailto:Amala.thomas2002@gmail.com">Email</a>
 
-        <div class="contactcard">
-          <h3>LinkedIn</h3>
-          <a class="contactlink" href="https://www.linkedin.com/in/amala-shaji" target="_blank" rel="noopener">linkedin.com/in/amala-shaji</a>
-        </div>
-      </div>
+</div>
 
-      <footer>
-        © <span id="year"></span> Amala Shaji • Built with GitHub Pages
-      </footer>
-    </section>
+</div>
 
-  </div>
+<section id="contact" class="section">
 
-  <script src="script.js"></script>
+<h2>Contact</h2>
+
+<div class="contactgrid">
+
+<div class="contactcard">
+<h3>Email</h3>
+<a class="contactlink" href="mailto:Amala.thomas2002@gmail.com">
+Amala.thomas2002@gmail.com
+</a>
+</div>
+
+<div class="contactcard">
+<h3>GitHub</h3>
+<a class="contactlink" href="https://github.com/shajmahal" target="_blank">
+github.com/shajmahal
+</a>
+</div>
+
+<div class="contactcard">
+<h3>LinkedIn</h3>
+<a class="contactlink" href="https://linkedin.com/in/amala-shaji" target="_blank">
+linkedin.com/in/amala-shaji
+</a>
+</div>
+
+</div>
+
+<footer>
+© <span id="year"></span> Amala Shaji
+</footer>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
