@@ -84,7 +84,7 @@ const projectData = {
 
     <h4>What I learned</h4>
     <p>
-      I learned how much good architecture and documentation improve both the development and presentation of software work.
+      I learned how much good architecture and documentation improve both development and presentation of software work.
     </p>
   `
 };
