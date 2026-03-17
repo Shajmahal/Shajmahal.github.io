@@ -1,168 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amala Shaji | Computer Engineering Portfolio</title> 
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amala Shaji | Computer Engineering Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="bg"></div>
+<div class="bg"></div>
 
-  <div class="container">
+<div class="container">
 
-    <nav class="nav">
-      <a class="logo" href="index.html">AS</a>
+<nav class="nav">
+<a class="logo" href="index.html">AS</a>
 
-      <div class="navLinks">
-        <a href="#projects">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+<div class="navLinks">
+<a href="#projects">Projects</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-    <h1 class="headline grad">Amala Shaji</h1>
+<h1 class="headline grad">Amala Shaji</h1>
 
-    <div class="subheading">
-      Hardware • Embedded Systems • Software
-    </div>
+<div class="subheading">
+Hardware • Embedded Systems • Software
+</div>
 
-    <!-- ABOUT ME NOTEPAD -->
-    <div class="terminal">
-      <div class="terminalTop">
-        <div class="dots">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-        </div>
-      </div>
+<!-- ABOUT -->
+<div class="terminal">
+<div class="terminalTop">
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
+</div>
 
-      <div class="terminalBody">
-        <h2 class="aboutTitle">Get to know me</h2>
+<div class="terminalBody">
 
-        <p class="introText">
-          I'm a Computer Engineering student interested in building practical systems that connect hardware and software.
-        </p>
+<h2 class="aboutTitle">Get to know me</h2>
 
-        <p class="introText">
-          I enjoy projects where I can take an idea from concept to something real — whether that’s designing circuit boards, writing embedded firmware, or building software tools.
-        </p>
+<p class="introText">
+I'm a Computer Engineering student interested in building practical systems that connect hardware and software.
+</p>
 
-        <p class="introText">
-          My goal is to understand how systems work at a deeper level while documenting what I learn as I build.
-        </p>
-      </div>
-    </div>
+<p class="introText">
+I enjoy projects where I can take an idea from concept to something real — whether that’s designing circuit boards, writing embedded firmware, or building software tools.
+</p>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2 class="projectsTitle">Projects</h2>
+<p class="introText">
+My goal is to understand how systems work at a deeper level while documenting what I learn as I build.
+</p>
 
-      <div class="projectsGrid">
+</div>
+</div>
 
-        <div class="projectNote" onclick="openModal('pcb')">
-          <div class="terminalTop">
-            <div class="dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-          </div>
 
-          <div class="terminalBody">
-            <h3 class="projectNoteTitle">PCB Design & Validation</h3>
-            <p class="projectNoteText">
-              Designed and tested a printed circuit board from schematic design through validation and debugging.
-            </p>
-            <div class="projectClick">Click to open full project →</div>
-          </div>
-        </div>
+<!-- PROJECTS -->
+<section id="projects" class="section">
 
-        <div class="projectNote" onclick="openModal('firmware')">
-          <div class="terminalTop">
-            <div class="dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-          </div>
+<h2 class="projectsTitle">Projects</h2>
 
-          <div class="terminalBody">
-            <h3 class="projectNoteTitle">Embedded Firmware System</h3>
-            <p class="projectNoteText">
-              Built firmware for sensor communication, structured testing, and real-time system behavior.
-            </p>
-            <div class="projectClick">Click to open full project →</div>
-          </div>
-        </div>
+<div class="projectsGrid">
 
-        <div class="projectNote" onclick="openModal('software')">
-          <div class="terminalTop">
-            <div class="dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-          </div>
+<div class="projectNote" onclick="openModal('pcb')">
+<div class="terminalTop">
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
+</div>
 
-          <div class="terminalBody">
-            <h3 class="projectNoteTitle">Software Application Prototype</h3>
-            <p class="projectNoteText">
-              Developed a modular software prototype with clean architecture, interface structure, and documentation.
-            </p>
-            <div class="projectClick">Click to open full project →</div>
-          </div>
-        </div>
+<div class="terminalBody">
+<h3 class="projectNoteTitle">PCB Design & Validation</h3>
+<p class="projectNoteText">
+Designed and tested a printed circuit board from schematic to validation.
+</p>
+<div class="projectClick">Click to open →</div>
+</div>
+</div>
 
-      </div>
-    </section>
+<div class="projectNote" onclick="openModal('firmware')">
+<div class="terminalTop">
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
+</div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2 class="contactTitle">Contact</h2>
+<div class="terminalBody">
+<h3 class="projectNoteTitle">Embedded Firmware</h3>
+<p class="projectNoteText">
+Built firmware for sensor communication and real-time data handling.
+</p>
+<div class="projectClick">Click to open →</div>
+</div>
+</div>
 
-      <div class="contactGrid">
-        <div class="contactCard">
-          <h3>Email</h3>
-          <a href="mailto:Amala.thomas2002@gmail.com">Amala.thomas2002@gmail.com</a>
-        </div>
+<div class="projectNote" onclick="openModal('software')">
+<div class="terminalTop">
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
+</div>
 
-        <div class="contactCard">
-          <h3>GitHub</h3>
-          <a href="https://github.com/shajmahal" target="_blank">github.com/shajmahal</a>
-        </div>
+<div class="terminalBody">
+<h3 class="projectNoteTitle">Software Prototype</h3>
+<p class="projectNoteText">
+Created a modular application with clean architecture and documentation.
+</p>
+<div class="projectClick">Click to open →</div>
+</div>
+</div>
 
-        <div class="contactCard">
-          <h3>LinkedIn</h3>
-          <a href="https://linkedin.com/in/amala-shaji" target="_blank">linkedin.com/in/amala-shaji</a>
-        </div>
-      </div>
+</div>
 
-      <footer>
-        © <span id="year"></span> Amala Shaji
-      </footer>
-    </section>
+</section>
 
-  </div>
 
-  <!-- PROJECT MODAL -->
-  <div class="overlay" id="overlay">
-    <div class="modal">
-      <div class="terminalTop modalTop">
-        <div class="dots">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-        </div>
+<!-- RESUME -->
+<section id="resume" class="section">
 
-        <button class="closeBtn" onclick="closeModal()">Close</button>
-      </div>
+<h2 class="projectsTitle">Resume</h2>
 
-      <div class="modalBody" id="modalContent"></div>
-    </div>
-  </div>
+<div class="terminal">
 
-  <script src="script.js"></script>
+<div class="terminalTop">
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
+</div>
+
+<div class="terminalBody">
+
+<div class="resumeButtons">
+<a href="resume.pdf" target="_blank" class="resumeBtn">Open PDF</a>
+<a href="resume.pdf" download class="resumeBtn">Download</a>
+</div>
+
+<iframe src="resume.pdf" class="resumeFrame"></iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+
+<h2 class="contactTitle">Contact</h2>
+
+<div class="contactGrid">
+
+<div class="contactCard">
+<h3>Email</h3>
+<a href="mailto:Amala.thomas2002@gmail.com">Amala.thomas2002@gmail.com</a>
+</div>
+
+<div class="contactCard">
+<h3>GitHub</h3>
+<a href="https://github.com/shajmahal" target="_blank">github.com/shajmahal</a>
+</div>
+
+<div class="contactCard">
+<h3>LinkedIn</h3>
+<a href="https://linkedin.com/in/amala-shaji" target="_blank">linkedin.com/in/amala-shaji</a>
+</div>
+
+</div>
+
+<footer>
+© <span id="year"></span> Amala Shaji
+</footer>
+
+</section>
+
+</div>
+
+
+<!-- MODAL -->
+<div class="overlay" id="overlay">
+<div class="modal">
+
+<div class="terminalTop modalTop">
+<div class="dots">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
+<button class="closeBtn" onclick="closeModal()">Close</button>
+</div>
+
+<div class="modalBody" id="modalContent"></div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
