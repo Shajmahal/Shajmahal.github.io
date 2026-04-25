@@ -1,4 +1,6 @@
+```javascript
 const year = document.getElementById("year");
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }
@@ -7,155 +9,270 @@ const overlay = document.getElementById("overlay");
 const modalContent = document.getElementById("modalContent");
 
 const projectData = {
+
   pcb: `
+
     <h2>PCB Design & Validation</h2>
 
     <p>
-      This project focused on designing and evaluating a printed circuit board from the schematic stage through physical testing.
-      The goal was to create a reliable hardware design while documenting design choices and debugging steps clearly.
+      This project focused on designing and evaluating
+      a printed circuit board from schematic planning
+      through testing and validation.
     </p>
 
     <h4>Overview</h4>
+
     <p>
-      A hardware-centered project focused on turning a board concept into a testable physical design.
-      It involved moving from planning and component organization into validation and troubleshooting.
+      A hardware-centered project focused on turning
+      a board concept into a functional and testable design.
     </p>
 
     <h4>Tools Used</h4>
+
     <p>
-      PCB design workflow, circuit planning, component layout, hardware debugging, and validation testing.
+      PCB workflows, circuit planning,
+      hardware debugging, and validation testing.
     </p>
 
     <h4>My Role</h4>
+
     <ul>
-      <li>Worked through schematic and layout planning</li>
-      <li>Organized board structure and component placement</li>
-      <li>Tested board behavior and investigated issues</li>
-      <li>Documented the validation and debugging process</li>
+      <li>Worked through schematic planning</li>
+      <li>Organized board layouts</li>
+      <li>Tested hardware behavior</li>
+      <li>Documented debugging steps</li>
     </ul>
 
     <h4>Challenges</h4>
+
     <p>
-      The main challenge was making sure the design remained practical and testable while identifying small issues that affected system behavior.
+      One challenge was identifying smaller hardware issues
+      that affected overall board performance.
     </p>
 
     <h4>Result</h4>
+
     <p>
-      The project strengthened my understanding of how design decisions affect hardware performance and how structured debugging improves the validation process.
+      Strengthened my understanding of hardware validation,
+      testing workflows, and debugging processes.
     </p>
 
-    <div class="projectLinks">
-      <a class="projectLinkBtn" href="https://github.com/shajmahal" target="_blank">GitHub Repo</a>
-    </div>
   `,
 
+
+
   firmware: `
+
     <h2>Embedded Firmware System</h2>
 
     <p>
-      This project involved developing firmware for a system that interacts with sensors and supports real-time behavior.
-      The focus was on building readable, reliable logic for embedded use.
+      Built firmware focused on sensors,
+      communication systems,
+      and structured real-time behavior.
     </p>
 
     <h4>Overview</h4>
+
     <p>
-      An embedded systems project connecting software logic with hardware communication and data handling.
-      It emphasized structure, reliability, and testing.
+      An embedded systems project connecting
+      firmware logic with hardware interaction.
     </p>
 
     <h4>Tools Used</h4>
+
     <p>
-      Embedded C/C++ concepts, firmware logic design, sensor interfacing, debugging workflow, and system testing.
+      Embedded C/C++,
+      debugging workflows,
+      sensor interfacing,
+      and testing systems.
     </p>
 
     <h4>My Role</h4>
+
     <ul>
-      <li>Developed structured firmware logic</li>
-      <li>Worked on sensor communication and handling input data</li>
-      <li>Tested behavior and improved reliability</li>
-      <li>Focused on clearer debugging and organization</li>
+      <li>Built structured firmware logic</li>
+      <li>Handled sensor communication</li>
+      <li>Tested reliability behavior</li>
+      <li>Improved debugging structure</li>
     </ul>
 
     <h4>Challenges</h4>
+
     <p>
-      The biggest challenge was making the firmware behave consistently while keeping the logic readable and easier to troubleshoot.
+      The biggest challenge was making firmware behavior
+      reliable while keeping the code readable.
     </p>
 
     <h4>Result</h4>
+
     <p>
-      This project improved my understanding of embedded reliability, debugging flow, and the importance of writing maintainable firmware.
+      Improved my understanding of maintainable firmware
+      and embedded debugging systems.
     </p>
 
-    <div class="projectLinks">
-      <a class="projectLinkBtn" href="https://github.com/shajmahal" target="_blank">GitHub Repo</a>
-    </div>
   `,
 
+
+
+  cloud: `
+
+    <h2>Cloud Deployment Dashboard</h2>
+
+    <p>
+      This project explored cloud deployment concepts
+      through a dashboard focused on uptime monitoring,
+      deployment systems,
+      and infrastructure visibility.
+    </p>
+
+    <h4>Overview</h4>
+
+    <p>
+      A cloud-focused project centered around scalable
+      infrastructure concepts and deployment workflows.
+    </p>
+
+    <h4>Tools Used</h4>
+
+    <p>
+      Cloud hosting concepts,
+      deployment pipelines,
+      monitoring systems,
+      infrastructure visualization,
+      and GitHub workflow integration.
+    </p>
+
+    <h4>My Role</h4>
+
+    <ul>
+      <li>Designed dashboard structure</li>
+      <li>Built deployment workflow concepts</li>
+      <li>Focused on scalability systems</li>
+      <li>Worked on uptime monitoring ideas</li>
+    </ul>
+
+    <h4>Challenges</h4>
+
+    <p>
+      One challenge was designing a system
+      that represented complex infrastructure
+      in a clean and readable way.
+    </p>
+
+    <h4>Result</h4>
+
+    <p>
+      Strengthened my understanding of cloud systems,
+      deployment workflows,
+      and scalable infrastructure concepts.
+    </p>
+
+  `,
+
+
+
   software: `
+
     <h2>Software Application Prototype</h2>
 
     <p>
-      This project focused on building a modular software prototype with clean organization, readable structure, and clear documentation.
+      Built a modular software prototype
+      with clean organization and readable structure.
     </p>
 
     <h4>Overview</h4>
+
     <p>
-      A software project aimed at creating an application structure that is easy to understand, present, and improve over time.
+      A software project focused on creating
+      maintainable and scalable application architecture.
     </p>
 
     <h4>Tools Used</h4>
+
     <p>
-      HTML, CSS, JavaScript, modular front-end structure, interface planning, and documentation.
+      HTML,
+      CSS,
+      JavaScript,
+      modular structure,
+      and interface planning.
     </p>
 
     <h4>My Role</h4>
+
     <ul>
-      <li>Built a cleaner project structure</li>
-      <li>Improved readability and organization</li>
-      <li>Worked on interface presentation and clarity</li>
-      <li>Documented design decisions and structure</li>
+      <li>Built modular structure</li>
+      <li>Improved code readability</li>
+      <li>Worked on interface presentation</li>
+      <li>Documented architecture decisions</li>
     </ul>
 
     <h4>Challenges</h4>
+
     <p>
-      The main challenge was balancing simplicity with structure so the project stayed clean, readable, and easy to expand.
+      The main challenge was balancing simplicity
+      with scalability and organization.
     </p>
 
     <h4>Result</h4>
+
     <p>
-      The final prototype presented a stronger foundation for future development and showed the value of good architecture and documentation.
+      Created a stronger foundation
+      for scalable application development.
     </p>
 
-    <div class="projectLinks">
-      <a class="projectLinkBtn" href="https://github.com/shajmahal" target="_blank">GitHub Repo</a>
-    </div>
   `
 };
 
+
+
 function openModal(projectKey) {
+
   if (!overlay || !modalContent) return;
-  modalContent.innerHTML = projectData[projectKey] || "<p>Project details coming soon.</p>";
+
+  modalContent.innerHTML =
+    projectData[projectKey] ||
+    "<p>Project details coming soon.</p>";
+
   overlay.classList.add("active");
+
 }
+
+
 
 function closeModal() {
+
   if (!overlay) return;
+
   overlay.classList.remove("active");
+
 }
 
+
+
 if (overlay) {
+
   overlay.addEventListener("click", function (e) {
+
     if (e.target === overlay) {
       closeModal();
     }
+
   });
+
 }
 
+
+
 document.addEventListener("keydown", function (e) {
+
   if (e.key === "Escape") {
     closeModal();
   }
+
 });
+
+
 
 window.openModal = openModal;
 window.closeModal = closeModal;
+```
