@@ -1,17 +1,26 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Amala Shaji | Computer Engineering Portfolio</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
   <div class="bg"></div>
 
   <div class="container">
+
     <nav class="nav">
-      <a class="logo" href="#">AS</a>
+
+      <a class="logo" href="#">
+        AS
+      </a>
 
       <div class="navLinks">
         <a href="#projects">Projects</a>
@@ -19,238 +28,520 @@
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </div>
+
     </nav>
 
+
+
     <header class="hero">
-      <p class="eyebrow">Computer Engineering Portfolio</p>
-      <h1 class="headline grad">Amala Shaji</h1>
-      <p class="subheading">Hardware • Embedded Systems • Software</p>
-      <p class="heroSummary">
-        Computer Engineering student building practical systems across hardware, embedded firmware, and software development.
-        I enjoy turning ideas into real, testable projects and documenting the process clearly.
+
+      <p class="eyebrow">
+        Computer Engineering Portfolio
       </p>
+
+      <h1 class="headline grad">
+        Amala Shaji
+      </h1>
+
+      <p class="subheading">
+        Hardware • Embedded Systems • Software
+      </p>
+
+      <p class="heroSummary">
+        Computer Engineering student building practical systems
+        across hardware, embedded firmware, and software development.
+        I enjoy turning ideas into real, testable projects and
+        documenting the process clearly.
+      </p>
+
     </header>
 
+
+
     <section class="terminal">
+
       <div class="terminalTop">
+
         <div class="dots">
           <span class="dot red"></span>
           <span class="dot yellow"></span>
           <span class="dot green"></span>
         </div>
-        <div class="windowLabel">about_me.txt</div>
+
+        <div class="windowLabel">
+          about_me.txt
+        </div>
+
       </div>
+
+
 
       <div class="terminalBody">
-        <h2 class="aboutTitle">Get to know me</h2>
+
+        <h2 class="aboutTitle">
+          Get to know me
+        </h2>
 
         <p class="introText">
-          I’m a Computer Engineering student focused on hardware, embedded systems, and software development.
-          I’m most interested in projects where I can take something from concept to a working result, whether that means designing a PCB,
-          writing firmware, or building a clean software interface.
+          I’m a Computer Engineering student focused on hardware,
+          embedded systems, and software development.
+          I’m most interested in projects where I can take
+          something from concept to a working result.
         </p>
 
         <p class="introText">
-          I care about understanding systems deeply, testing what I build, and keeping my work organized and well documented.
-          My goal is to keep growing as an engineer by building projects that are practical, reliable, and clearly presented.
+          I care about understanding systems deeply,
+          testing what I build, and keeping my work
+          organized and documented.
         </p>
+
       </div>
+
     </section>
 
+
+
     <section id="projects" class="section">
+
       <div class="sectionHeader">
+
         <div>
-          <p class="sectionEyebrow">Selected Work</p>
-          <h2 class="sectionTitle">Projects</h2>
+          <p class="sectionEyebrow">
+            Selected Work
+          </p>
+
+          <h2 class="sectionTitle">
+            Projects
+          </h2>
         </div>
-        <p class="sectionNote">Click any project to open the full breakdown.</p>
+
+        <p class="sectionNote">
+          Click any project to open the full breakdown.
+        </p>
+
       </div>
 
+
+
       <div class="projectsGrid">
+
+
         <article class="projectNote" onclick="openModal('pcb')">
+
           <div class="terminalTop">
+
             <div class="dots">
               <span class="dot red"></span>
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <div class="windowLabel">pcb_design.txt</div>
+
+            <div class="windowLabel">
+              pcb_design.txt
+            </div>
+
           </div>
 
           <div class="terminalBody">
+
             <div class="projectPreview pcbPreview"></div>
-            <h3 class="projectNoteTitle">PCB Design & Validation</h3>
+
+            <h3 class="projectNoteTitle">
+              PCB Design & Validation
+            </h3>
+
             <p class="projectNoteText">
-              Designed and evaluated a printed circuit board from schematic planning to testing and validation.
+              Designed and evaluated a printed circuit board
+              from schematic planning to testing and validation.
             </p>
+
             <div class="projectMeta">
               <span>Hardware</span>
               <span>Testing</span>
               <span>Documentation</span>
             </div>
-            <div class="projectClick">Open full project →</div>
+
+            <div class="projectClick">
+              Open full project →
+            </div>
+
           </div>
+
         </article>
 
+
+
         <article class="projectNote" onclick="openModal('firmware')">
+
           <div class="terminalTop">
+
             <div class="dots">
               <span class="dot red"></span>
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <div class="windowLabel">embedded_firmware.txt</div>
+
+            <div class="windowLabel">
+              embedded_firmware.txt
+            </div>
+
           </div>
 
           <div class="terminalBody">
+
             <div class="projectPreview firmwarePreview"></div>
-            <h3 class="projectNoteTitle">Embedded Firmware System</h3>
+
+            <h3 class="projectNoteTitle">
+              Embedded Firmware System
+            </h3>
+
             <p class="projectNoteText">
-              Built firmware for communication, sensing, and structured real-time system behavior.
+              Built firmware for communication,
+              sensing, and structured real-time system behavior.
             </p>
+
             <div class="projectMeta">
               <span>Embedded</span>
               <span>Firmware</span>
               <span>Sensors</span>
             </div>
-            <div class="projectClick">Open full project →</div>
+
+            <div class="projectClick">
+              Open full project →
+            </div>
+
           </div>
+
         </article>
 
-        <article class="projectNote" onclick="openModal('software')">
+
+
+        <article class="projectNote" onclick="openModal('cloud')">
+
           <div class="terminalTop">
+
             <div class="dots">
               <span class="dot red"></span>
               <span class="dot yellow"></span>
               <span class="dot green"></span>
             </div>
-            <div class="windowLabel">software_prototype.txt</div>
+
+            <div class="windowLabel">
+              cloud_dashboard.txt
+            </div>
+
           </div>
 
           <div class="terminalBody">
-            <div class="projectPreview softwarePreview"></div>
-            <h3 class="projectNoteTitle">Software Application Prototype</h3>
+
+            <div class="projectPreview cloudPreview"></div>
+
+            <h3 class="projectNoteTitle">
+              Cloud Deployment Dashboard
+            </h3>
+
             <p class="projectNoteText">
-              Created a modular application prototype with a clear structure, readable code, and clean presentation.
+              Built a cloud-style dashboard focused on deployment flow,
+              hosting systems, uptime tracking,
+              and scalable infrastructure concepts.
             </p>
+
+            <div class="projectMeta">
+              <span>Cloud</span>
+              <span>DevOps</span>
+              <span>Infrastructure</span>
+            </div>
+
+            <div class="projectClick">
+              Open full project →
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="projectNote" onclick="openModal('software')">
+
+          <div class="terminalTop">
+
+            <div class="dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+
+            <div class="windowLabel">
+              software_prototype.txt
+            </div>
+
+          </div>
+
+          <div class="terminalBody">
+
+            <div class="projectPreview softwarePreview"></div>
+
+            <h3 class="projectNoteTitle">
+              Software Application Prototype
+            </h3>
+
+            <p class="projectNoteText">
+              Created a modular application prototype
+              with a clear structure and clean presentation.
+            </p>
+
             <div class="projectMeta">
               <span>Software</span>
               <span>UI</span>
               <span>Architecture</span>
             </div>
-            <div class="projectClick">Open full project →</div>
+
+            <div class="projectClick">
+              Open full project →
+            </div>
+
           </div>
+
         </article>
+
+
       </div>
+
     </section>
 
+
+
     <section id="skills" class="section">
+
       <div class="sectionHeader">
+
         <div>
-          <p class="sectionEyebrow">Core Strengths</p>
-          <h2 class="sectionTitle">Skills</h2>
+          <p class="sectionEyebrow">
+            Core Strengths
+          </p>
+
+          <h2 class="sectionTitle">
+            Skills
+          </h2>
         </div>
+
       </div>
 
+
+
       <div class="skillsGrid">
+
         <div class="skillCard">
+
           <h3>Hardware</h3>
+
           <ul>
             <li>PCB design concepts</li>
             <li>Circuit analysis</li>
             <li>Testing and validation</li>
-            <li>Debugging hardware behavior</li>
+            <li>Hardware debugging</li>
           </ul>
+
         </div>
 
+
+
         <div class="skillCard">
+
           <h3>Embedded Systems</h3>
+
           <ul>
-            <li>Embedded C/C++ fundamentals</li>
+            <li>Embedded C/C++</li>
             <li>Sensor interfacing</li>
-            <li>Firmware logic design</li>
-            <li>Real-time debugging workflow</li>
+            <li>Firmware logic</li>
+            <li>Real-time debugging</li>
           </ul>
+
         </div>
 
+
+
         <div class="skillCard">
+
           <h3>Software</h3>
+
           <ul>
             <li>Python</li>
             <li>HTML, CSS, JavaScript</li>
             <li>Git and GitHub</li>
-            <li>Modular code structure</li>
+            <li>Modular architecture</li>
           </ul>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <section id="resume" class="section resumeSection">
+
       <div class="sectionHeader centerHeader">
+
         <div>
-          <p class="sectionEyebrow">Professional Snapshot</p>
-          <h2 class="sectionTitle">Resume</h2>
+
+          <p class="sectionEyebrow">
+            Professional Snapshot
+          </p>
+
+          <h2 class="sectionTitle">
+            Resume
+          </h2>
+
         </div>
+
       </div>
+
+
 
       <p class="resumeIntro">
-        Download or preview my resume below for a full view of my academic background, technical work, and experience.
+        Download or preview my resume below.
       </p>
 
+
+
       <div class="resumeButtons">
-        <a href="resume.pdf" target="_blank" class="resumeBtn">Open PDF</a>
-        <a href="resume.pdf" download class="resumeBtn">Download PDF</a>
+
+        <a href="resume.pdf"
+           target="_blank"
+           class="resumeBtn">
+          Open PDF
+        </a>
+
+        <a href="resume.pdf"
+           download
+           class="resumeBtn">
+          Download PDF
+        </a>
+
       </div>
 
-      <iframe src="resume.pdf" class="resumeFrame" title="Resume PDF"></iframe>
+
+
+      <iframe
+        src="resume.pdf"
+        class="resumeFrame"
+        title="Resume PDF">
+      </iframe>
+
     </section>
 
+
+
     <section id="contact" class="section">
+
       <div class="sectionHeader centerHeader">
+
         <div>
-          <p class="sectionEyebrow">Let’s Connect</p>
-          <h2 class="sectionTitle">Contact</h2>
+
+          <p class="sectionEyebrow">
+            Let’s Connect
+          </p>
+
+          <h2 class="sectionTitle">
+            Contact
+          </h2>
+
         </div>
+
       </div>
+
+
 
       <div class="contactGrid">
-        <a class="contactCard" href="mailto:Amala.thomas2002@gmail.com">
+
+        <a class="contactCard"
+           href="mailto:Amala.thomas2002@gmail.com">
+
           <h3>Email Me</h3>
-          <p>Amala.thomas2002@gmail.com</p>
+
+          <p>
+            Amala.thomas2002@gmail.com
+          </p>
+
         </a>
 
-        <a class="contactCard" href="https://github.com/shajmahal" target="_blank">
+
+
+        <a class="contactCard"
+           href="https://github.com/shajmahal"
+           target="_blank">
+
           <h3>View GitHub</h3>
-          <p>Explore code, projects, and documentation.</p>
+
+          <p>
+            Explore code, projects,
+            and documentation.
+          </p>
+
         </a>
 
-        <a class="contactCard" href="https://linkedin.com/in/amala-shaji" target="_blank">
+
+
+        <a class="contactCard"
+           href="https://linkedin.com/in/amala-shaji"
+           target="_blank">
+
           <h3>Connect on LinkedIn</h3>
-          <p>Professional profile, background, and networking.</p>
+
+          <p>
+            Professional profile and networking.
+          </p>
+
         </a>
+
       </div>
+
+
 
       <footer>
         © <span id="year"></span> Amala Shaji
       </footer>
+
     </section>
+
   </div>
 
+
+
   <div class="overlay" id="overlay">
+
     <div class="modal">
+
       <div class="terminalTop modalTop">
+
         <div class="dots">
           <span class="dot red"></span>
           <span class="dot yellow"></span>
           <span class="dot green"></span>
         </div>
-        <button class="closeBtn" onclick="closeModal()">Close</button>
+
+        <button class="closeBtn"
+                onclick="closeModal()">
+          Close
+        </button>
+
       </div>
 
-      <div class="modalBody" id="modalContent"></div>
+      <div class="modalBody"
+           id="modalContent">
+      </div>
+
     </div>
+
   </div>
 
+
+
   <script src="script.js"></script>
+
 </body>
 </html>
+```
